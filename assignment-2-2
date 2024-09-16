@@ -1,0 +1,3 @@
+myNewAge = 19 + (2050 - 2024)
+print("My Current Age is " + str(19))
+print("I will be " + str(myNewAge) + " in 2050.")
