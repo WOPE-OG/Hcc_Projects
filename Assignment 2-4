@@ -1,0 +1,16 @@
+# input statements
+salary = float(input())
+numDependents = float(input())
+
+# calculate taxes here
+stateTax = salary*0.065
+FederalTax = salary*0.28
+dependentDeduction = salary*0.025*numDependents
+totalWitholding = stateTax+FederalTax+dependentDeduction
+takeHomepay = salary-totalWitholding
+print("State Tax: $" + str(stateTax))
+print("Federal Tax: $" + str(FederalTax))
+print("Dependents: $" + str(dependentDeduction))
+# output statements
+print("Salary: $" + str(salary))
+print("Take Home Pay: $" + str(takeHomepay))
