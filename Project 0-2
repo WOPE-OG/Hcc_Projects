@@ -5,8 +5,8 @@ authorized_vehicles = ["Ford F-150", 'Chevrolet Silverado', 'Tesla CyberTruck', 
 
 #Menu 
 def show_menu():
-    print("********************************AutoCountry Vehicle Finder v0.1********************************")
-    print("1. Print all Authorized Vhicles")
+    print("********************************AutoCountry Vehicle Finder v0.2********************************")
+    print("1. Print all Authorized Vehicles")
     print("2. SEARCH for Authorized Vehicle")
     print("3. Exit")
     
