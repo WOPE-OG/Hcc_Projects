@@ -1,0 +1,30 @@
+#List of cars to use 
+AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan' ]
+
+
+
+#Menu 
+def show_menu():
+    print("********************************AutoCountry Vehicle Finder v0.1********************************")
+    print("1. Print all Authorized Vhicles")
+    print("2. Exit")
+
+def main():
+    while True:
+        show_menu()
+        choice = input("Please Enter the following number below from the following menu: ")
+
+        if choice == '1':
+            print("PRINT all Authorized Vehicles")
+            print(AllowedVehiclesList)
+        elif choice == '2':
+            print("See Ya Later.... ")
+            break
+        else:
+            print("Wrong one bud try something else")
+
+if __name__ == "__main__":
+    main()
+
+
+ 
