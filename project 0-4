@@ -1,0 +1,62 @@
+# List of cars to use 
+AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan' ]
+
+authorized_vehicles = ["Ford F-150", 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan']
+
+# Menu 
+def show_menu():
+    print("********************************AutoCountry Vehicle Finder v0.4********************************")
+    print("1. Print all Authorized Vhicles")
+    print("2. SEARCH for Authorized Vehicle")
+    print("3. Add Authorized Vehicle")
+    print("4. DELETE Authorized Vehicle")
+    print("5. Exit")
+
+def remove_vehicle():
+    remove_Car = input("Enter vehicle name to remove: ")
+    if remove_Car in authorized_vehicles:
+        AllowedVehiclesList.remove(remove_Car)
+        authorized_vehicles.remove(remove_Car)
+        print(f"{remove_Car} has been removed from the list")
+    else:
+        print(f"{remove_Car} has already been removed, please try again")
+
+
+def search_vehicle():
+    search_term = input("Enter vehicle name to search: ")
+    if search_term in authorized_vehicles:
+        print(f"{search_term} is an authorized vehicle.")
+    else:
+        print(f"{search_term} is not an authorized vehicle.")
+
+def add_vehicle():
+    new_vehicle = input("Enter the name of the new vehicle to add: ")
+    if new_vehicle not in authorized_vehicles:
+        AllowedVehiclesList.append(new_vehicle)
+        authorized_vehicles.append(new_vehicle)
+        print(f"{new_vehicle} has been added to the list of authorized vehicles.")
+    else:
+        print(f"{new_vehicle} is already in the list of authorized vehicles.")
+
+def main():
+    while True:
+        show_menu()
+        choice = input("Please Enter the following number below from the following menu: ")
+
+        if choice == '1':
+            print("PRINT all Authorized Vehicles")
+            print(AllowedVehiclesList)
+        elif choice == '2':
+            search_vehicle()
+        elif choice == '3':
+            add_vehicle()
+        elif choice == '4':
+            remove_vehicle()    
+        elif choice == '5':
+            print("See Ya Later.... ")
+            break
+        else:
+            print("Wrong one bud try something else")
+
+if __name__ == "__main__":
+    main()
