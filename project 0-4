@@ -8,19 +8,22 @@ def show_menu():
     print("********************************AutoCountry Vehicle Finder v0.4********************************")
     print("1. Print all Authorized Vhicles")
     print("2. SEARCH for Authorized Vehicle")
-    print("3. Add Authorized Vehicle")
+    print("3. ADD Authorized Vehicle")
     print("4. DELETE Authorized Vehicle")
     print("5. Exit")
 
 def remove_vehicle():
     remove_Car = input("Enter vehicle name to remove: ")
     if remove_Car in authorized_vehicles:
-        AllowedVehiclesList.remove(remove_Car)
-        authorized_vehicles.remove(remove_Car)
-        print(f"{remove_Car} has been removed from the list")
+        confirm = input(f"Are you sure you want to remove '{remove_Car}' from the Authorized Vehicles List? (yes/no): ")
+        if confirm.lower() == 'yes':
+            AllowedVehiclesList.remove(remove_Car)
+            authorized_vehicles.remove(remove_Car)
+            print(f"You have REMOVED '{remove_Car}' as an authorized vehicle.")
+        else:
+            print(f"'{remove_Car}' was not removed.")
     else:
-        print(f"{remove_Car} has already been removed, please try again")
-
+        print(f"'{remove_Car}' is not found in the list of authorized vehicles.")
 
 def search_vehicle():
     search_term = input("Enter vehicle name to search: ")
@@ -48,7 +51,7 @@ def main():
             print(AllowedVehiclesList)
         elif choice == '2':
             search_vehicle()
-        elif choice == '3':
+        elif choice is '3':
             add_vehicle()
         elif choice == '4':
             remove_vehicle()    
