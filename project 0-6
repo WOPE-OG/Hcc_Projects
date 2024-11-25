@@ -16,7 +16,7 @@ write_vehicles_to_file(filename, allowed_vehicles_list)
 
 # Menu
 def show_menu():
-    print("********************************AutoCountry Vehicle Finder v0.4********************************")
+    print("********************************AutoCountry Vehicle Finder v1.0********************************")
     print("1. Print all Authorized Vehicles")
     print("2. SEARCH for Authorized Vehicle")
     print("3. ADD Authorized Vehicle")
